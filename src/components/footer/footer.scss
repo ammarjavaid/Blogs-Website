@@ -1,0 +1,76 @@
+@import "../../app/globals.scss";
+
+.footer {
+  background-color: $color_dark;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+
+  p {
+    font-size: 14px;
+    color: $color_light;
+  }
+
+  h1 {
+    margin: 0;
+    color: $color_light;
+  }
+
+  .f-logo {
+    width: 250px;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: $color_light;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      padding: 5px 0;
+      color: $color_light;
+    }
+  }
+
+  .input-field {
+    position: relative;
+    input {
+      border: none;
+      padding: 5px 10px;
+      width: 100%;
+      font-size: 14px;
+      &::placeholder {
+        font-size: 14px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .arrow {
+      position: absolute;
+      right: 5px;
+      top: 9px;
+      color: $color_green;
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      p {
+        font-size: 12px;
+        span {
+          color: $color_green;
+        }
+      }
+    }
+    .right {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}

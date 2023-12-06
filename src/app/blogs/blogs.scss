@@ -1,0 +1,390 @@
+@import "../globals.scss";
+
+.hero-section {
+  background-color: $color_light;
+  height: 70vh;
+
+  .hero-section-main {
+    height: 100%;
+  }
+
+  .hero-section-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    h1 {
+      color: $color_dark;
+    }
+    p {
+      color: $color_green;
+      font-weight: bold;
+    }
+  }
+
+  .hero-section-img {
+    display: flex;
+    justify-content: end;
+  }
+
+  .img {
+    width: 400px;
+    img {
+      width: 100%;
+    }
+  }
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1); // Zoom in
+    }
+    100% {
+      transform: scale(1); // Zoom out
+    }
+  }
+
+  .zoom-in-out {
+    width: 100%;
+    animation: zoomInOut 5s infinite alternate;
+  }
+}
+
+.blogs-page {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blogs-content {
+    .date {
+      font-size: 14px;
+      padding-top: 20px;
+      span {
+        font-weight: 600;
+        &:hover {
+          color: $color_green;
+          cursor: pointer;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 24px;
+      color: $color_dark;
+    }
+    p {
+      color: #888;
+      text-align: justify;
+    }
+  }
+
+  .beginning_of_crypto {
+    position: relative;
+    margin: 40px 0;
+    .beginning {
+      font-size: 20px;
+      font-style: italic;
+      padding-left: 20px;
+      &::after {
+        content: "";
+        width: 2px;
+        height: 50px;
+        background-color: $color_green;
+        position: absolute;
+        top: 5px;
+        left: 0;
+      }
+    }
+  }
+
+  .blog-content-images {
+    display: flex;
+    gap: 10px;
+    padding: 30px 0;
+    .img {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .transaction_fee {
+    h1 {
+      font-size: 24px;
+      color: $color_dark;
+    }
+    p {
+      color: #888;
+      text-align: justify;
+    }
+  }
+
+  .blockchain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    .block-chain-right {
+      p {
+        display: flex;
+        align-items: center;
+        span {
+          padding-left: 10px;
+          .icon-fb {
+            font-size: 14px;
+            color: #888;
+          }
+          .icon-tw {
+            margin: 0 10px;
+            color: #888;
+          }
+          .icon-linkedin {
+            font-size: 17px;
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+
+  .transaction_client_box {
+    border: 1px solid rgb(219, 219, 219);
+    padding: 30px 20px;
+    border-radius: 5px;
+
+    h2 {
+      font-size: 22px;
+      color: $color_dark;
+    }
+    p {
+      color: #888888;
+    }
+    .img {
+      @media screen and (max-width: 540px) {
+        width: 70px;
+      }
+    }
+  }
+
+  .related-posts {
+    margin: 5rem 0;
+    h1 {
+      font-size: 24px;
+      color: $color_dark;
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+
+    h4 {
+      font-size: 15px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      color: #888;
+    }
+  }
+
+  .comments {
+    margin: 5rem 0;
+    h1 {
+      font-size: 24px;
+      color: $color_dark;
+    }
+    h4 {
+      font-size: 18px;
+      margin: 0;
+    }
+    p {
+      color: #888;
+    }
+    .img {
+      @media screen and (max-width: 968px) {
+        width: 70px;
+      }
+    }
+  }
+
+  .post_a_comment {
+    @media screen and (max-width: 968px) {
+      margin-bottom: 4rem;
+    }
+    h1 {
+      font-size: 24px;
+      color: $color_dark;
+    }
+    textarea {
+      width: 100%;
+      padding: 15px;
+      font-size: 13px;
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: 5px;
+      &::placeholder {
+        color: #888;
+        font-size: 13px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 7px 15px;
+      font-size: 13px;
+      border-radius: 5px;
+      border: 1px solid rgb(219, 219, 219);
+      &::placeholder {
+        color: #888;
+        font-size: 13px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .submit {
+      margin-top: 20px;
+      border: none;
+      background-color: $color_green;
+      padding: 7px 27px;
+      color: $color_light;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+  }
+
+  .latest_posts {
+    margin-top: 3rem;
+    h3 {
+      font-size: 22px;
+      color: $color_dark;
+      margin-bottom: 40px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background-color: $color_green;
+        top: 28px;
+        left: 0;
+      }
+    }
+
+    .latest_posts_content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 35px;
+      .latest_posts_content_left {
+        img {
+          width: 150px;
+        }
+      }
+      .latest_posts_content_right {
+        h5 {
+          font-size: 18px;
+        }
+        p {
+          color: #888;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .updates {
+    margin-top: 3rem;
+    h3 {
+      font-size: 22px;
+      color: $color_dark;
+      margin-bottom: 30px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background-color: $color_green;
+        top: 28px;
+        left: 0;
+      }
+    }
+    p {
+      color: #888;
+    }
+    .input {
+      position: relative;
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgb(219, 219, 219);
+        font-size: 13px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .envelope {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        font-size: 22px;
+        color: $color_green;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .live_cryptoCrushers {
+    margin-top: 3rem;
+    h3 {
+      font-size: 22px;
+      color: $color_dark;
+      margin-bottom: 30px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background-color: $color_green;
+        top: 28px;
+        left: 0;
+      }
+    }
+
+    .search_bar {
+      position: relative;
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgb(219, 219, 219);
+        font-size: 13px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .search {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        font-size: 22px;
+        color: $color_green;
+        cursor: pointer;
+      }
+    }
+  }
+}

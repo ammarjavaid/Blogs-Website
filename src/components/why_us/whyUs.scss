@@ -1,0 +1,31 @@
+@import "../../app/globals.scss";
+
+.why-us {
+  background-color: $color_light;
+
+  .head {
+    text-align: center;
+    h1 {
+      color: $color_dark;
+    }
+    p {
+      font-weight: 700;
+    }
+  }
+
+  .card-data {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    img {
+      width: 50px;
+    }
+    .title-description {
+      h2 {
+        font-size: 18px;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+    }
+  }
+}
